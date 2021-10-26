@@ -7,10 +7,13 @@ async function get_items(){
   // const item = {"id":10,"name":"xxxxxx"}
   // Path to the images: https://ecuaguia.com/iceland/images/
   response.forEach( item => {
+    let final_price = item.price + (item.price * 24.50)/100
+    final_price = final_price.toFixed(2)
     let div_item = `<div class="item">
                       <div>${item.id}</div>
                       <div>${item.name}</div>
                       <img src="https://ecuaguia.com/iceland/images/${item.image}">
+                      <h1>${final_price}</h1>
                     </div>`
     document.querySelector("#items").insertAdjacentHTML("beforeend", div_item)
   })
