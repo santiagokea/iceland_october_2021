@@ -14,8 +14,9 @@
       <input  type="text" 
               placeholder="What are you looking for?" 
               onfocus="show_results()"
-              onblur="hide_results()">
-      <button onclick="show_results()">🔎</button>
+              onblur="hide_results()"
+              oninput="search()">
+      <button onclick="search(); show_results();">🔎</button>
     </form>
     <div id="results">
       <div class="result">iphone 10</div>

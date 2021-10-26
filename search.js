@@ -2,6 +2,13 @@ function show_results(){
   document.querySelector("#results").style.display = "grid"
 }
 
-// Create the function hide_results()
+function hide_results(){
+  document.querySelector("#results").style.display = "none"
+}
+
+function search(){
+  console.log("searching...")
+  // fetch request against the API
+}
 
 
