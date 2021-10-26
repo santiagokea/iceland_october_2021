@@ -1,6 +1,10 @@
+
+let page = 1
+
 async function get_items(){
   // Connect to the API
-  const conn = await fetch("https://ecuaguia.com/iceland/api-get-items")
+  // const conn = await fetch("https://ecuaguia.com/iceland/api-get-items?page="+page)
+  const conn = await fetch(`https://ecuaguia.com/iceland/api-get-items?page=${page}`)
   // Get the data from the API
   const response = await conn.json()
   console.log(response)
