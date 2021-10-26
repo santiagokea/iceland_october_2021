@@ -21,8 +21,8 @@ async function get_items(){
                     </div>`
     document.querySelector("#items").insertAdjacentHTML("beforeend", div_item)
   })
-
-
+  // page = page + 1
+  page ++
 }
 
 get_items()
