@@ -9,16 +9,21 @@
 </head>
 <body>
   
-  <div>
+  <div id="search">
     <form onsubmit="return false">
-      <input type="text" placeholder="What are you looking for?">
-      <button>🔎</button>
+      <input  type="text" 
+              placeholder="What are you looking for?" 
+              onfocus="show_results()"
+              onblur="hide_results()">
+      <button onclick="show_results()">🔎</button>
     </form>
     <div id="results">
       <div class="result">iphone 10</div>
       <div class="result">iphone 11</div>
     </div>
   </div>
+
+  <script src="search.js"></script>
 
 </body>
 </html>
