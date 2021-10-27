@@ -24,16 +24,18 @@ function search(){
       let div_item = `<div class="result">
                         <span>${item.item_name}</span>
                         <span>${item.item_id}</span>
+                        <span onclick="delete_item('${item.item_id}')">🗑️</span>
                       </div>`
       document.querySelector("#results").insertAdjacentHTML("afterbegin", div_item)
     })
   }, 500 )
-
-
-  // https://coderspage.com/iceland/search-items?search
-  // Get the items
-  // Show the items in the drop down
 }
+
+// ##############################
+function delete_item(item_id){
+  console.log(`Deleting item with id: ${item_id}`)
+}
+
 
 
 
