@@ -7,14 +7,16 @@ function hide_results(){
   document.querySelector("#results").style.display = "none"
 }
 
+let my_timer
 async function search(){
   console.log("searching...")
   document.querySelector("#results").innerHTML = ""
   // const search = event.target.value
   // console.log(search)
   // Connect to the API
-
-  setTimeout( async ()=>{
+  // clearTimeout
+  clearTimeout(my_timer)
+  my_timer = setTimeout( async ()=>{
     const search = document.querySelector("#search_for").value
     const conn = await fetch(`https://coderspage.com/iceland/search-items?search=${search}`)
     const data = await conn.json()
