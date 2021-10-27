@@ -41,11 +41,12 @@ async function delete_item(item_id){
   // database via the API
   // Connect to the API - DELETE
   // Send the ID as part the URL
-  /*
-  const conn = await fetch("xxxxxxxxx/item/${item_id}", {
-    method : "DELETE"
+
+  const conn = await fetch(`https://coderspage.com/iceland/delete-item/${item_id}`, {
+    method : "POST"
   })
-  */
+  console.log("Item deleted from server")
+
   // NOTE: Since you are all deleting, at some point 
   // there will be no items in the system. So don't panic
 
