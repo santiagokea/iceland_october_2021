@@ -21,7 +21,7 @@ function search(){
     const conn = await fetch(`https://coderspage.com/iceland/search-items?search=${search}`)
     const data = await conn.json()
     data.forEach( item => {
-      let div_item = `<div class="result">
+      let div_item = `<div id="ID${item.item_id}" class="result">
                         <span>${item.item_name}</span>
                         <span>${item.item_id}</span>
                         <span onclick="delete_item('${item.item_id}')">🗑️</span>
@@ -33,6 +33,9 @@ function search(){
 
 // ##############################
 function delete_item(item_id){
+  // This line removes the element from the DOM, though still
+  // exists in the database
+  document.querySelector(`#ID${item_id}`).remove()
   console.log(`Deleting item with id: ${item_id}`)
 }
 
