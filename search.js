@@ -46,7 +46,8 @@ async function delete_item(item_id){
     method : "DELETE"
   })
   */
-
+  // NOTE: Since you are all deleting, at some point 
+  // there will be no items in the system. So don't panic
 
 }
 
