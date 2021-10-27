@@ -8,7 +8,7 @@ function hide_results(){
 }
 
 let my_timer
-async function search(){
+function search(){
   console.log("searching...")
   document.querySelector("#results").innerHTML = ""
   // const search = event.target.value
@@ -21,7 +21,10 @@ async function search(){
     const conn = await fetch(`https://coderspage.com/iceland/search-items?search=${search}`)
     const data = await conn.json()
     data.forEach( item => {
-      let div_item = `<div class="result">${item.item_name}</div>`
+      let div_item = `<div class="result">
+                        <span>${item.item_name}</span>
+                        <span>${item.item_id}</span>
+                      </div>`
       document.querySelector("#results").insertAdjacentHTML("afterbegin", div_item)
     })
   }, 2000 )
