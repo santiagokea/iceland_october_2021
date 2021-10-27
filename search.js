@@ -27,7 +27,7 @@ function search(){
                       </div>`
       document.querySelector("#results").insertAdjacentHTML("afterbegin", div_item)
     })
-  }, 2000 )
+  }, 500 )
 
 
   // https://coderspage.com/iceland/search-items?search
