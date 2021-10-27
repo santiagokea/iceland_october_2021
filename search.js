@@ -32,11 +32,22 @@ function search(){
 }
 
 // ##############################
-function delete_item(item_id){
+async function delete_item(item_id){
   // This line removes the element from the DOM, though still
   // exists in the database
   document.querySelector(`#ID${item_id}`).remove()
   console.log(`Deleting item with id: ${item_id}`)
+  // Make sure that the element is also deleted from the 
+  // database via the API
+  // Connect to the API - DELETE
+  // Send the ID as part the URL
+  /*
+  const conn = await fetch("xxxxxxxxx/item/${item_id}", {
+    method : "DELETE"
+  })
+  */
+
+
 }
 
 
