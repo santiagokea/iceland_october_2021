@@ -42,8 +42,12 @@ async function delete_item(item_id){
   // Connect to the API - DELETE
   // Send the ID as part the URL
 
-  const conn = await fetch(`https://coderspage.com/iceland/delete-item/${item_id}`, {
-    method : "POST"
+  const conn = await fetch(`https://coderspage.com/iceland/item/${item_id}`, {
+    // mode: 'cors',
+    method : "DELETE",
+    headers: {
+      'Access-Control-Allow-Origin':'*'
+    }    
   })
   console.log("Item deleted from server")
 
@@ -52,6 +56,18 @@ async function delete_item(item_id){
 
 }
 
+async function put_test(){
+  const conn = await fetch(`https://coderspage.com/iceland/put`, {
+    // mode: 'cors',
+    method : "PUT",
+    headers: {
+      'Access-Control-Allow-Origin':'*'
+    }    
+  })
+  console.log("PUT HERE")
+}
+
+put_test()
 
 
 
