@@ -18,9 +18,10 @@
   
   <script>
     async function get_color(){
-      const conn = await fetch("get-color")
+      const conn = await fetch("https://coderspage.com/get-color")
       const color = await conn.text()
       console.log(color)
+      document.querySelector("body").style.background = color
     }
 
     setInterval(get_color, 2000)
