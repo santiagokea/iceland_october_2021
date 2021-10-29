@@ -16,5 +16,17 @@
 </head>
 <body>
   
+  <script>
+    async function get_color(){
+      const conn = await fetch("get-color")
+      const color = await conn.text()
+      console.log(color)
+    }
+
+    setInterval(get_color, 2000)
+
+
+  </script>
+
 </body>
 </html>
