@@ -56,10 +56,10 @@ async function delete_item(item_id){
 
 }
 
-async function put_test(){
-  const conn = await fetch(`https://coderspage.com/iceland/put`, {
+async function patch_item(){
+  const conn = await fetch(`https://coderspage.com/iceland/item/9898`, {
     // mode: 'cors',
-    method : "PUT",
+    method : "PATCH",
     headers: {
       'Access-Control-Allow-Origin':'*'
     }    
@@ -67,7 +67,7 @@ async function put_test(){
   console.log("PUT HERE")
 }
 
-put_test()
+patch_item()
 
 
 
